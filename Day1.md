@@ -71,7 +71,7 @@ int main(){
 | `protected`| The member functions ***inside*** the class or the ***friend functions*** or ***derived class***.|
 
 
-> *Nếu trong class t không khai báo phạm vi truy cập thì sẽ mặc định là `private`*
+> *Nếu trong class ta không khai báo phạm vi truy cập thì sẽ mặc định là `private`*
 
 ## **4. Constructor and Destructor** (Hàm tạo và Hàm hủy)
 
