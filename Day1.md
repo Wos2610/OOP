@@ -15,7 +15,7 @@ Một đối tượng bao gồm 2 thông tin: thuộc tính và phương thức.
 
 ### **Con trỏ this**   
 - Đây là một con trỏ đặc biệt dùng để trỏ đến địa chỉ của đối tượng hiện tại  
-```js
+```c++
 class SinhVien{
 	
 	string MSV = "B20DCCN001";
@@ -98,7 +98,7 @@ int main(){
 
 Default Constructor ( Zero-argument constructor ): 
 
-```js
+```c++
 class Student{
     private:
         string name;
@@ -112,7 +112,7 @@ class Student{
 ```
 Parameterized Constructors
 
-```js
+```c++
 class Student{
     private:
         string name;
@@ -143,7 +143,7 @@ class Student{
 > \<class-name>: : ~ \<class-name>(){...}
 
 
-```js
+```c++
 class Student{
     private:
         string name;
@@ -160,7 +160,7 @@ class Student{
 - Nếu muốn đọc giá trị của `private` member -> dùng public get method
 - Nếu muốn cập nhật giá trị của `private` member -> dùng public set method
 
-```js
+```c++
 class Student{
     private:
         string name;
@@ -179,21 +179,21 @@ class Student{
 
 ##  **6. Stactic Variable**
 
-Biến static trong hàm : 
+### Biến static trong hàm : 
 - Vùng nhớ cho nó tồn tại theo vòng đời của chương trình.
 - Ngay cả khi hàm được gọi nhiều lần, vùng nhớ cho biến static chỉ được cấp phát một lần và giá trị của biến trong những lần gọi trước đó được lưu lại và được sử dụng để thực hiện thông qua các lượt gọi hàm tiếp theo.
 
-Biến static trong class:
+### Biến static trong class:
 - Các biến tĩnh trong một lớp được chia sẻ bởi các đối tượng.
 - Chúng ta không tạo ra các bản sao cho cùng một biến tĩnh của các đối tượng khác nhau.
 > *Biến tĩnh không thể khởi tạo bằng Constructor*
 
 ## **7. Kĩ thuật chia tách file ( file.h & file.cpp )**
 
-File.h :
+### **File.h** :
 - Dùng để khai báo hàm.
 - Include tất cả thư viện, using namespace, khai báo tất cả các hàm.
-```js
+```c++
 /// test.h
 #include<iostream>
 #include<string>
@@ -205,12 +205,12 @@ using namespace std;
 int sum(int a, int b);
 ```
 
-File.cpp :
+### **File.cpp** :
 - Dùng để viết hàm.
 - Khai báo file.h, viết các hàm, viết hàm main.
 > *Tất cả các file trong cùng một project phải được đặt trong cùng 1 folder*
 
-```js
+```c++
 #include "test.h"
 
 int sum(int a, int b){
