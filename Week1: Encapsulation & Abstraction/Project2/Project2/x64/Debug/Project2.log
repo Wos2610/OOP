@@ -1,0 +1,24 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Project2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Factory.cpp
+C:\Users\LENOVO\source\repos\Project2\Project2\Factory.cpp(18,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\LENOVO\source\repos\Project2\Project2\Factory.cpp(30,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\LENOVO\source\repos\Project2\Project2\Factory.cpp(42,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\LENOVO\source\repos\Project2\Project2\Factory.cpp(51,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Officer.cpp
+  Source.cpp
+  Worker.cpp
+C:\Users\LENOVO\source\repos\Project2\Project2\Worker.cpp(4,13): warning C4566: character represented by universal-character-name '\u1EAD' cannot be represented in the current code page (1252)
+C:\Users\LENOVO\source\repos\Project2\Project2\Worker.cpp(6,13): warning C4566: character represented by universal-character-name '\u1EAD' cannot be represented in the current code page (1252)
+C:\Users\LENOVO\source\repos\Project2\Project2\Worker.cpp(6,13): warning C4566: character represented by universal-character-name '\u1ED5' cannot be represented in the current code page (1252)
+C:\Users\LENOVO\source\repos\Project2\Project2\Worker.cpp(8,13): warning C4566: character represented by universal-character-name '\u1EAD' cannot be represented in the current code page (1252)
+C:\Users\LENOVO\source\repos\Project2\Project2\Worker.cpp(8,13): warning C4566: character represented by universal-character-name '\u1EDB' cannot be represented in the current code page (1252)
+C:\Users\LENOVO\source\repos\Project2\Project2\Worker.cpp(11,13): warning C4566: character represented by universal-character-name '\u1EAD' cannot be represented in the current code page (1252)
+C:\Users\LENOVO\source\repos\Project2\Project2\Worker.cpp(13,13): warning C4566: character represented by universal-character-name '\u1EAD' cannot be represented in the current code page (1252)
+C:\Users\LENOVO\source\repos\Project2\Project2\Worker.cpp(13,13): warning C4566: character represented by universal-character-name '\u1ED1' cannot be represented in the current code page (1252)
+C:\Users\LENOVO\source\repos\Project2\Project2\Worker.cpp(13,13): warning C4566: character represented by universal-character-name '\u1EC7' cannot be represented in the current code page (1252)
+C:\Users\LENOVO\source\repos\Project2\Project2\Worker.cpp(19,13): warning C4566: character represented by universal-character-name '\u1ED5' cannot be represented in the current code page (1252)
+C:\Users\LENOVO\source\repos\Project2\Project2\Worker.cpp(20,13): warning C4566: character represented by universal-character-name '\u1EDB' cannot be represented in the current code page (1252)
+C:\Users\LENOVO\source\repos\Project2\Project2\Worker.cpp(22,13): warning C4566: character represented by universal-character-name '\u1ED1' cannot be represented in the current code page (1252)
+C:\Users\LENOVO\source\repos\Project2\Project2\Worker.cpp(22,13): warning C4566: character represented by universal-character-name '\u1EC7' cannot be represented in the current code page (1252)
+  Generating Code...
+  Project2.vcxproj -> C:\Users\LENOVO\source\repos\Project2\x64\Debug\Problem1.exe
