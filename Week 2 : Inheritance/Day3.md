@@ -83,15 +83,30 @@ int main(){
 ```
 ## **3. Function Overloading & Operator Overloading**
 
-### **Function Overloading** ( Nạp chồng hàm )
+### **3.1 Function Overloading** ( Nạp chồng hàm )
 - Định nghĩa : Nhiều hàm ***cùng tên*** nhưng ***khác tham số truyền vào*** ( khác số lượng hoặc kiểu dữ liệu ).
 - Các hàm ***không*** thể nạp chồng : 
   + Hai hàm chỉ khác nhau kiểu trả về.
   + Một trong các hàm là static function.
   + Tham số truyền vào là pointer hoặc array là tương đương.
 - Function Overloading với tham số const khi và chỉ khi tham số truyền vào là ***tham chiếu*** hoặc ***con trỏ***.
+- Example : 
+``` c++
+// function with float type parameter
+float absolute(float var){
+    if (var < 0.0)
+        var = -var;
+    return var;
+}
 
-### **Operator Overloading** ( Nạp chồng toán tử )
+// function with int type parameter
+int absolute(int var) {
+     if (var < 0)
+         var = -var;
+    return var;
+}
+```
+### **3.2 Operator Overloading** ( Nạp chồng toán tử )
 - Định nghĩa : Là định nghĩa lại toán tử đã có trên kiểu dữ liệu người dùng tự định nghĩa ( Không làm thay đổi chức năng ban đầu của toán tử ).
 
 - Ví dụ : toán tử '+' ban đầu dùng để cộng các số -> định nghĩa lại để có thể dùng để cộng các string.
@@ -106,16 +121,110 @@ int main(){
 > <class_name> `operator` \<operator>`(`<class_name> ...`)` `{`
   ...
 `}`
+- Example : 
+```c++
+#include<iostream>
+#include<math.h>
+#include<string>
+#include<vector>
+#include<algorithm>
+#include<map>
+using namespace std;
+
+#define M 1000006
+
+long long gcd(long long a, long long b){
+	while(a != 0){
+		long long temp = a;
+		a =  b % a;
+		b = temp;
+	}
+	return b;
+}
+
+class PhanSo{
+	private:
+		long long tu;
+		long long mau;
+	public:
+		PhanSo(long long a, long long b){
+			tu = a;
+			mau = b;
+		}
+		
+		void rutgon(){
+			long long k = gcd(tu, mau);
+			tu /= k;
+			mau /= k;
+		}
+		
+    // Input/Output Operator Overloading
+		friend ostream & operator << (ostream &out, const PhanSo &A){
+			cout << A.tu << "/" << A.mau;
+			return out;
+		};
+		
+		friend istream & operator >> (istream &in, PhanSo &A){
+			cin >> A.tu >> A.mau;
+			return in;
+		}
+		
+    // Binary Operator Overloading
+		PhanSo operator + (PhanSo &A){
+			PhanSo q(1, 1);
+			q.mau = mau * A.mau;
+			q.tu = tu * A.mau + mau * A.tu;
+			q.rutgon();
+			return q;
+		}
+};
+
+
+int main(){
+    PhanSo p(1,1), q(1,1);
+	cin >> p >> q;
+	cout << p + q;
+	return 0;
+}
+```
+
+
 
 ## 4. Function Overriding ( Ghi đè )
 - Định nghĩa : Là định nghĩa lại hàm trong `base_class` ở `derived_class` ( tham số truyền vào phải giống hệt nhau về số lượng và kiểu dữ liệu )
 
 - Một lớp cha có thể có nhiều lớp con kế thừa nhưng mỗi lớp con sẽ có những thay đổi sao cho phù hợp -> cần ghi đè.
 
+```c++
+#include <iostream>
+using namespace std;
+
+class Base {
+   public:
+    void print() {
+        cout << "Base Function" << endl;
+    }
+};
+
+class Derived : public Base {
+   public:
+    void print() {
+        cout << "Derived Function" << endl;
+    }
+};
+
+int main() {
+    Derived derived1;
+    derived1.print();
+    return 0;
+}
+```
+
+
 
 ## 5. Friend Function
 - Hàm friend có thể truy cập trực tiếp đến các phần tử private
-> Nên dùng hàm friend cho toán tử nạp chồng
+> Nên dùng `friend` function cho ***operator overloading***
 - Syntax :   
 > `friend` \<type> <function_name> `{` `}`
 
