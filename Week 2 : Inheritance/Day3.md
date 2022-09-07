@@ -37,6 +37,7 @@ class Student, class Teacher, class Worker
 
 ### **Multiple Inheritance** ( Đa kế thừa )
 - Lớp con có thể có nhiều lớp cha
+- Chỉ có trong C++, phá vỡ quy tắc của OOP -> không nên dùng
 
 ![](https://media.geeksforgeeks.org/wp-content/uploads/multiple-inheritance.png)
 
@@ -169,15 +170,26 @@ class PhanSo{
 			return in;
 		}
 		
-    // Binary Operator Overloading
-		PhanSo operator + (PhanSo &A){
+    // Binary Operator Overloading 
+        // Khi khong co object chu thi phai dung ham friend
+		friend PhanSo operator + (PhanSo A, PhanSo B){
 			PhanSo q(1, 1);
-			q.mau = mau * A.mau;
-			q.tu = tu * A.mau + mau * A.tu;
+			q.mau = B.mau * A.mau;
+			q.tu = B.tu * A.mau + B.mau * A.tu;
+			q.rutgon();
+			return q;
+		}
+
+        // Khi có object chủ this thì khong can dung ham friend
+        PhanSo operator + (PhanSo A){
+			PhanSo q(1, 1);
+			q.mau = this->mau * A.mau;
+			q.tu = this->tu * A.mau + this->mau * A.tu;
 			q.rutgon();
 			return q;
 		}
 };
+
 
 
 int main(){
