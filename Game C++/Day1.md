@@ -80,6 +80,7 @@ window.display();
 
 # **6. Animation**
 - Là hiệu ứng chuyển động của các nhân vật hoặc môi trường trong game.
+- Animation trong game 2D là việc vẽ lần lượt các ảnh trong 1 chuỗi ảnh của một hoặc nhiều đối tượng theo một đơn vị thời gian. Mỗi Animation hoặc nhiều Animation có thể đại diện cho một hành động, ứng xử cụ thể của nhân vật.
 - Để tạo animation thì cần tạo spritesheet
 
 # **6. Tạo cửa sổ** 
